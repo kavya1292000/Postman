@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "abbb4fdc-b571-421f-9699-b66995180a3b",
+		"name": "Variables-Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32958898"
+	},
+	"item": [
+		{
+			"name": "LocalVariable",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"City\", \"New York\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?appid=aa9126a7d7b4c20f33602b045a197e3f&q=London\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "aa9126a7d7b4c20f33602b045a197e3f"
+						},
+						{
+							"key": "q",
+							"value": "London\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

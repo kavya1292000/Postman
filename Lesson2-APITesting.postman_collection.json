@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "87a6b755-d4fa-4b77-9158-dff5e47cf07b",
+		"name": "Lesson2-APITesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32958898"
+	},
+	"item": [
+		{
+			"name": "GetRequest Demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://regres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"regres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenWeather Get Demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?appid=4cb163bfd3f36ce0b709569490609a1c&lat=42.9832406&lon=-81.243372\n\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "appid",
+							"value": "4cb163bfd3f36ce0b709569490609a1c"
+						},
+						{
+							"key": "lat",
+							"value": "42.9832406"
+						},
+						{
+							"key": "lon",
+							"value": "-81.243372\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}?appid={{api_key}}&q={{City_name}}\n",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "{{api_key}}"
+						},
+						{
+							"key": "q",
+							"value": "{{City_name}}\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "City_name",
+			"value": "London"
+		}
+	]
+}
